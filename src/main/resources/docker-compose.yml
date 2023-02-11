@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  ms-card:
+    image: shxyvvv/ms-card
+    ports:
+      - "8080:8080"
+    networks:
+      - microservice-learning
+
+  ms-account:
+    image: shxyvvv/ms-account
+    ports:
+      - "8090:8080"
+    networks:
+      - microservice-learning
+
+  ms-loan:
+    image: shxyvvv/ms-loan
+    ports:
+      - "9090:8080"
+    networks:
+      - microservice-learning
+
+networks:
+  microservice-learning:
